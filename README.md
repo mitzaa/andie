@@ -2,15 +2,16 @@
 
 
 
-Andie (***A*** ***N***on ***D***estructable ***I***mage ***E***ditor) is a lightweight, non-descructable image editor. It is focused on image manipulation through filters, colourscales and changing orientation/size.
+Andie (***A*** ***N***on ***D***estructive ***I***mage ***E***ditor)
 
-To run andie simply clone the repository and run the main class. 
+To run Andie simply clone the repository and run the main class. 
 
 ---
+**Available Image Filters**
 
 *Gaussian Filter* 
 - Accessed via: Filter menu (Gaussian blur Filter option)
-- Tested on large and small images. Formal test done to ensure default radius is set to 1. Other testing was done on different radius sizes by printing the kernals array and cross checking it with examples in the lab-book to ensure values were correctly calculated (Ouput image was also cross-checked with images provided in lab book).
+- Uses a convolution kernel to apply the gaussian blur. Extent of blur is determined by users radius input.
 - No know issues.
 
 *Brightness Filter* 
@@ -25,12 +26,37 @@ To run andie simply clone the repository and run the main class.
 
 *Sharpen Filter* 
 - Accessed via: Filter menu (Sharpen option)
-- No formal testing was needed here as there is no input from the user to test different cases of. Testing was done using array based implementations of colonels to make sure that the formula correctly worked. Eye tested against sample image in 202 lab book to ensure that it is doing the correct kernel operation.
+- No known issues
 
 *Median Filter* 
 - Accessed via: Filter menu (Median Option)
-- Oliver and Andrew are writing this on James behalf so am unsure what tests where done along the way. But can assume the arrays for the RGB values would have been printed to check the output is correct as well as cross checking the output with a known working median filter to ensure correctness.
-- No known issues.
+- Works by taking the median pixel value from a 'window' of pixels, effectively removing noise from the image while preserving edges.
+- No known issues
+
+  *Posterize filter* 
+- Accessed via: Filter menu
+- Reduces the number of colours in your image by reducing how many colours are displayed per colour channel. Lower numbers will have less colours displayed.
+- No known issues
+
+*Invert filter*
+- Accessed via: Filter menu
+- Tested with different sized images and different colours
+- No known issues
+
+
+  *Extened Filters* 
+- A convolution file was created to manually apply the convolution for each filter (replaces convolveOp methods etc.). Many tests were done to ensure right pixels were being gathered as detecting out of bounds pixels had many iterations of 'if statements' to come to the current implemented one. The median filter was also completely overhauled to share the same layout as the Convolution.java file as they had to work similarly but did not require a kernal as the convolution file required. The work can be seen when a filter is called upon an image (in the Filters tab of the drop down menu) and no black border is present (should be noted that with larger radii applied to filters may take a long time to display the change).
+
+*Filters With Negative Results* 
+- In the convolution file a boolean value is passed into the extendedConvolution method to know if the filter needs an offset applied to it. When this is applied the value 127 is added to each raw rgb value as a result of the filter. The edge detection and emboss filters use this to show the result of applying certian filters correctly by giving the negative values meaning rather than just defaulting them back to 0 or 255 if the are greater than such.
+
+*Emboss Filters* 
+- Accessed via:  Filter menu (Emboss filters option)
+- The user can select from 8 preset kernels to apply to an image. Tests were done to ensure the expected kernel is applied when selected from the flter selection menu. The offset as described above is aplied for these filter by adding 127 to the raw results of the rgb value for each pixel when a filter is applied.
+
+*Edge Detection Filters* 
+- Accessed via: Filter menu (Edge detection filters option)
+- The user can also select from a filter selection menu, two preset options are given. One option is a horizontal edge dectection and the other is vertical edge detection. Works in a similar way as to the emboss filters as an offset is applied to account for negative rgb values.
 
 ---
 
@@ -104,14 +130,6 @@ To run andie simply clone the repository and run the main class.
 *Keyboard Shortcuts* 
 - Added to most commonly used features such as open file and undo/redo
 
-*Posterize filter* 
-- Accessed via: Filter menu
-- Tested with different sized images and different colours
-- No known issues
 
-*Invert filter*
-- Accessed via: Filter menu
-- Tested with different sized images and different colours
-- No known issues
 
 
