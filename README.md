@@ -1,6 +1,5 @@
 **Andie Image Editor**
-https://cosc202-otago-otters.cspages.otago.ac.nz/andie-image-editor/docs/
-Gitlab pages^^
+
 
 
 Andie Image Editor is a lightweight, non-descructable code Editor. It is focused on Image manipulation through Filters, Colourscales and changing orientation/size.
