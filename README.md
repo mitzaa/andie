@@ -2,7 +2,9 @@
 
 
 
-Andie Image Editor is a lightweight, non-descructable code Editor. It is focused on Image manipulation through Filters, Colourscales and changing orientation/size.
+Andie (***A*** ***N***on ***D***estructable ***I***mage ***E***ditor) is a lightweight, non-descructable image editor. It is focused on image manipulation through filters, colourscales and changing orientation/size.
+
+To run andie simply clone the repository and run the main class. 
 
 ---
 
@@ -79,7 +81,7 @@ Andie Image Editor is a lightweight, non-descructable code Editor. It is focused
 - No known issues
 
 
-*Draw Mode* (Oliver Bisley)
+*Draw Mode* 
 - Access the draw mode through the draw menu in the menu bar. User selects shape they want to draw between elipse, Square, and line. User will be prompted with a popup menu to select colour. To leave draw mode press escape or leave through dropdown menu under draw line option. To change colour use option in dropdown menu.
 - Tested in same cases as mouse based region selection.
 - Minor issue in drawing animation with drawing elipse, top left corner looks strange until mouse is released. Does not effect  usability
