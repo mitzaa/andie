@@ -60,7 +60,7 @@ To run Andie simply clone the repository and run the main class.
 
 ---
 
-*Resize Functions* (Andrew Booth)
+*Resize Functions* 
 - Accessed via: Adjust Image menu (Resize 50% or Resize 150% option)
 - Tested on already resized images to see if output images compare. Formal tests were done to ensure the correct height and width were calculated for a test image using the correct scale for increasing or decreasing the size of the image.
 - No known issues.
